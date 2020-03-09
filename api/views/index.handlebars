@@ -1,0 +1,12 @@
+<h1 class="text-center">{{title}}</h1>
+
+<form action="/api/members" method="POST">
+    <input type="text" name="name" class="form-control">
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<ul class="list-group">
+    {{#each members}}
+        <li class="list-group-item">{{this.name}} || {{this.status}}</li>
+    {{/each}}
+</ul>
+<a class="btn btn-success" href="/api/members">View Api</a>

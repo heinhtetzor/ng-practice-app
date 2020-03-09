@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Chart</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <!-- drawing chart using ng2Chart plugin -->
+        <div style="display: block;">
+            <canvas
+            baseChart
+            [labels]="barChartLabels"
+            [datasets]="barChartData"
+            [chartType]="barChartType">
+
+            </canvas>
+        </div>
+    </mat-card-content>
+</mat-card>

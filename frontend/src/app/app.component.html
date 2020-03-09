@@ -1,0 +1,27 @@
+<mat-toolbar color="accent">
+    <button type="button" mat-button (click)="drawer.toggle()">
+        <mat-icon><i class="fas fa-list"></i></mat-icon>
+    </button>
+    <span>
+        Practice App
+    </span>
+</mat-toolbar>
+<mat-drawer-container class="example-container" autosize>
+
+    <mat-drawer #drawer class="sidenav" mode="push">
+        <mat-action-list>
+            <button mat-list-item [routerLink]="['/']" (click)="drawer.toggle()"> 
+                <mat-icon><i class="fas fa-home"></i> </mat-icon>&nbsp; Home </button>
+            <button mat-list-item [routerLink]="['/chart']" (click)="drawer.toggle()"> 
+                <mat-icon><i class="fas fa-chart-bar"></i> </mat-icon>&nbsp; Chart </button>
+            <button mat-list-item [routerLink]="['/form']" (click)="drawer.toggle()"> 
+                <mat-icon><i class="fa fa-pen"></i> </mat-icon>&nbsp; Form </button>
+          </mat-action-list>
+    </mat-drawer>
+  
+    <div class="sidenav-content">
+      <router-outlet></router-outlet>
+    </div>
+  
+  </mat-drawer-container>
+
